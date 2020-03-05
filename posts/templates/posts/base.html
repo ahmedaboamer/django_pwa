@@ -1,8 +1,12 @@
 
- <!DOCTYPE html>
+<!DOCTYPE html>
+
 <html>
+{% load pwa %}	<!--register the service worker-->
 {% load static %}
+
 <head>
+	{% progressive_web_app_meta %}	<!--register the service worker-->
 	<title>Django PWA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
@@ -49,6 +53,7 @@
         }
 	</style>
 </head>
+
 <body>
 	<div class="wrapper">	
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -88,4 +93,5 @@
 
 	</div>
 </body>
+
 </html>
