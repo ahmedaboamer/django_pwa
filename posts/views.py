@@ -1,6 +1,7 @@
 
 from django.shortcuts import render
 from django.core import serializers
+from django.http import HttpResponse
 from . models import feed
 import json
 
@@ -16,6 +17,11 @@ def index(request):
 		'results':results,
 	}
     return render(request,template,context)
+
+def getdata(request):
+    results=feed.objects.all()
+    jsondata = serializers.serialize('json',results)
+    return HttpResponse(jsondata)
 
 def base_layout(request):
     """base_layout() function is used to render base.html"""
