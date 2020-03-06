@@ -77,12 +77,14 @@ WSGI_APPLICATION = 'django_pwa.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# Here the name is the schema/database name,
+#  USER is the auth user and PASSWORD is the password for the auth user.
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'posts',
-        'USER':'user',
-        'PASSWORD':'user',
+        'NAME': 'django_pwa_db',
+        'USER':'dbadmin',
+        'PASSWORD':'djangopwadbpass',
         'HOST':'127.0.0.1',
         'PORT': '3306',
     }
@@ -126,3 +128,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'posts/static')
