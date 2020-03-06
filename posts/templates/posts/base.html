@@ -56,6 +56,7 @@
 
 <body>
 	<div class="wrapper">	
+		<!-- Navbar -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<a class="navbar-brand" href="#">
                 <h2>Django PWA</h2>
@@ -79,12 +80,18 @@
 
 		</nav>
 
+		<!-- Block content-->
 		<div id="content" class="container mt-3">
 			{% block content %}
 
 			{% endblock %}
 		</div>
 
+		<!-- JS files for IndexedDB Promised API -->
+		<script type="text/javascript" src="{% static 'js/idb.js' %}"></script>
+  		<script type="text/javascript" src="{% static 'js/idbop.js' %}"></script>
+
+		<!-- Footer -->
 		<div class="footer bg-dark">
 			<p>&copy Django PWA 2020</p>
 			<a class="alink" href="#">Privacy policy</a>&nbsp
