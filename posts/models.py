@@ -1,4 +1,3 @@
-
 from django.db import models
 
 # simple database in MySQL

@@ -11,7 +11,7 @@ A simple blog post website with offline capability that looks and feels like an 
 
 2. Install dependencies by running ```pip install -r requirements.txt```
 
-3. Open *MySQL workbench* and run the scripts in **db_scripts.sql** line by line.
+3. Open *MySQL workbench* and run the scripts in **db_scripts.sql** line by line. You can add sample posts by running the scripts in __post_data.sql__.
 
 4. Make migrations by running ```python manage.py makemigrations``` and ```python manage.py migrate``` respectively in your terminal
 
